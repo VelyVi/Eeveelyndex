@@ -31,9 +31,12 @@
 }
 
 .pokedex__container {
+	min-height: 100vh;
 	max-width: 1024px;
+	height: 100%;
+	width: 100vw;
 	margin: 0 auto;
-	padding: 0 1rem;
+	padding: 0 1rem 2rem;
 }
 
 .pokedex__form {
@@ -46,8 +49,8 @@
 
 .pokedex__cards {
 	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-	gap: 0.6rem;
+	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+	gap: 1rem;
 }
 
 .btns__pg button {
