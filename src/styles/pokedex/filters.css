@@ -1,0 +1,15 @@
+.select__input {
+	background-color: #fff;
+	border: 1px solid #ccc;
+	padding: 0.35rem 0.7rem;
+	border-radius: 7px;
+	display: flex;
+	align-items: center;
+	gap: 0.3rem;
+}
+
+.select__input input {
+	background-color: transparent;
+	border: none;
+	outline: none;
+}

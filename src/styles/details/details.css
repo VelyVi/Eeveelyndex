@@ -1,0 +1,275 @@
+.pokedetails {
+	background-image: url('/bg-poke3.jpg');
+	background-repeat: no-repeat;
+	background-position: center top;
+	background-attachment: fixed;
+	background-size: cover;
+}
+
+.poke__details-all {
+	display: grid;
+	place-content: center;
+	height: 100dvh;
+	min-width: 350px;
+	width: auto;
+}
+
+.poke__details {
+	width: 130%;
+	border-radius: 15px;
+	overflow: hidden;
+	height: auto;
+	cursor: pointer;
+	background-color: #ffffff80;
+	-webkit-backdrop-filter: brightness(1) blur(5px);
+	backdrop-filter: brightness(1) blur(5px);
+
+	&:hover {
+		box-shadow: 0 0 40px 0 #00000090;
+	}
+}
+
+.poke__details-header {
+	position: relative;
+	width: 100%;
+	aspect-ratio: 1.5;
+	margin-bottom: 1.3rem;
+}
+
+.poke__details-header img {
+	position: absolute;
+	top: 0.78rem;
+	left: 0;
+	right: 0;
+	margin: 0 auto;
+	width: 85%;
+	height: 100%;
+}
+
+.poke__details-body {
+	padding: 0 1rem 2rem;
+}
+
+.poke__details-nyn {
+	text-align: center;
+	text-transform: capitalize;
+}
+
+.poke__details-pya {
+	display: flex;
+	justify-content: center;
+	font-size: 14px;
+	gap: 7rem;
+	margin-top: 1rem;
+}
+
+.poke__details-tys {
+	display: flex;
+	justify-content: center;
+	font-size: 14px;
+	gap: 7rem;
+}
+
+.poke__details-stats {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	grid-template-rows: repeat(2, 1fr);
+	justify-content: center;
+	gap: 1rem;
+}
+
+.poke__details-item {
+	text-align: center;
+}
+
+.poke__details-item span:first-child {
+	display: block;
+	font-size: 12px;
+	color: #888;
+}
+
+.pokedetails__tys-items {
+	text-align: center;
+	margin-bottom: 1rem;
+	margin-top: 1rem;
+}
+
+.pokedetails__tys-items h3:first-child {
+	display: block;
+	font-size: 15px;
+	color: black;
+}
+
+.poke__details-altura {
+	text-align: center;
+}
+
+.poke__details-altura span:first-child {
+	display: block;
+	font-size: 12px;
+	color: #888;
+}
+
+.poke__details-peso {
+	text-align: center;
+}
+
+.poke__details-peso span:first-child {
+	display: block;
+	font-size: 12px;
+	color: #888;
+}
+
+.poke__details-types {
+	font-size: 13px;
+}
+
+.poke__stats-title {
+	text-align: center;
+}
+
+.type--normal .poke__details-header {
+	background: linear-gradient(
+		177.03deg,
+		#7e7e7e -11.97%,
+		#8d8d94 57.49%,
+		#d3d3d3 135.64%
+	);
+}
+.type--fighting .poke__details-header {
+	background: linear-gradient(
+		179.75deg,
+		#971b45 -19.96%,
+		#c23867 43.67%,
+		#cd7d98 138.4%
+	);
+}
+.type--flying .poke__details-header {
+	background: linear-gradient(
+		177.03deg,
+		#8edefe -11.97%,
+		#ffffff 57.49%,
+		#79b5f1 135.64%
+	);
+}
+.type--poison .poke__details-header {
+	background: linear-gradient(
+		177.03deg,
+		#5b3184 -11.97%,
+		#a564e3 71.28%,
+		#ce9bff 135.64%
+	);
+}
+.type--ground .poke__details-header {
+	background: linear-gradient(
+		176.83deg,
+		#dc8f7e -8.78%,
+		#ac7624 169.09%,
+		#a76a5b 242.33%
+	);
+}
+.type--rock .poke__details-header {
+	background: linear-gradient(
+		179.75deg,
+		#c6bcae -19.96%,
+		#b99c70 43.67%,
+		#b6aa98 138.4%
+	);
+}
+.type--bug .poke__details-header {
+	background: linear-gradient(
+		177.56deg,
+		#62db60 -58.92%,
+		#3bb039 16.57%,
+		#aaffa8 209.53%
+	);
+}
+.type--ghost .poke__details-header {
+	background: linear-gradient(
+		177.03deg,
+		#323569 -11.97%,
+		#454aa8 57.49%,
+		#787dda 135.64%
+	);
+}
+.type--steel .poke__details-header {
+	background: linear-gradient(
+		179.75deg,
+		#478a93 -19.96%,
+		#56a4ae 43.67%,
+		#a2bec1 138.4%
+	);
+}
+.type--fire .poke__details-header {
+	background: linear-gradient(
+		176.37deg,
+		#f96d6f -32.26%,
+		#e35825 22.55%,
+		#e8ae1b 125.72%
+	);
+}
+.type--water .poke__details-header {
+	background: linear-gradient(
+		179.57deg,
+		#133258 -70.14%,
+		#1479fb 56.16%,
+		#82b2f1 214.85%
+	);
+}
+
+.type--grass .poke__details-header {
+	background: linear-gradient(
+		178.92deg,
+		#7ec6c5 0.92%,
+		#abdac6 47.96%,
+		#cae099 99.08%
+	);
+}
+.type--electric .poke__details-header {
+	background: linear-gradient(
+		177.03deg,
+		#ada400 -11.97%,
+		#f6f6bb 57.49%,
+		#d0d03d 135.64%
+	);
+}
+.type--psychic .poke__details-header {
+	background: linear-gradient(
+		177.03deg,
+		#5b0065 -11.97%,
+		#651bd4 57.49%,
+		#db51ea 135.64%
+	);
+}
+.type--ice .poke__details-header {
+	background: linear-gradient(
+		177.03deg,
+		#6fbedf -11.97%,
+		#1383af 47.77%,
+		#bdebfe 136.72%
+	);
+}
+.type--dragon .poke__details-header {
+	background: linear-gradient(
+		179.75deg,
+		#0c1395 -19.96%,
+		#2b319b 43.67%,
+		#7075d9 138.4%
+	);
+}
+.type--dark .poke__details-header {
+	background: linear-gradient(
+		177.03deg,
+		#030706 -11.97%,
+		#0d1211 57.49%,
+		#5a5e5d 135.64%
+	);
+}
+.type--fairy .poke__details-header {
+	background: linear-gradient(
+		177.03deg,
+		#890aff -11.97%,
+		#ec7be2 57.49%,
+		#d7afd5 135.64%
+	);
+}

@@ -1,0 +1,83 @@
+.pokedex {
+	background-image: url('/bg-poke2.jpg');
+	background-repeat: no-repeat;
+	background-position: center top;
+	background-attachment: fixed;
+	background-size: cover;
+}
+
+.hero {
+	width: 100%;
+	height: 25vh;
+	background-image: url('/hero2.png');
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+}
+
+.hero img {
+	margin: 0 auto;
+}
+
+.btn__back {
+	display: flex;
+	align-items: center;
+	gap: 0.7rem;
+}
+
+.pokedex__container {
+	max-width: 1024px;
+	margin: 0 auto;
+	padding: 0 1rem;
+}
+
+.pokedex__form {
+	display: flex;
+	gap: 1rem;
+	justify-content: center;
+	align-items: center;
+	margin-bottom: 1.5rem;
+}
+
+.pokedex__cards {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+	gap: 0.6rem;
+}
+
+.btns__pg button {
+	border-radius: 6px;
+	border: 1px solid transparent;
+	padding: 0.6rem 2rem;
+	font-size: 1rem;
+	font-weight: 500;
+	font-family: inherit;
+	background-color: #fba700ae;
+	cursor: pointer;
+	transition: border-color 0.4s;
+	transition: box-shadow 0.4s;
+	border-bottom: 1rem;
+	padding-bottom: 1rem;
+	margin-bottom: 1rem;
+}
+
+.btns__pg {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 5rem;
+}
+
+.errpsy {
+	display: flex;
+	align-items: center;
+}
+
+.load__wooper {
+	display: grid;
+	place-content: center;
+	height: 100;
+	min-width: 350px;
+	width: auto;
+}
