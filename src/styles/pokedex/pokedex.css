@@ -1,7 +1,4 @@
 .pokedex {
-	display: grid;
-	place-content: center;
-
 	background-image: url('/bg-poke2.jpg');
 	background-repeat: no-repeat;
 	background-size: cover;

@@ -1,7 +1,4 @@
 .pokedetails {
-	display: grid;
-	place-content: center;
-
 	background-image: url('/bg-poke3.jpg');
 	background-repeat: no-repeat;
 	background-size: cover;
