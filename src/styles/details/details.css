@@ -1,17 +1,21 @@
-.pokedetails {
+.pokedetails__container {
+	min-height: 100vh;
+	height: 100%;
+	width: 100vw;
+
 	background-image: url('/bg-poke3.jpg');
 	background-repeat: no-repeat;
 	background-size: cover;
-	background-attachment: fixed;
-	background-position: center top;
+	background-position: center;
+	justify-content: center;
+	align-items: center;
+	display: grid;
 }
 
-.poke__details-all {
-	display: grid;
-	place-content: center;
-	height: 100dvh;
-	min-width: 350px;
-	width: auto;
+.poke__details-card {
+	max-width: 350px;
+	width: 100%;
+	padding: 2rem 1.5rem;
 }
 
 .poke__details {

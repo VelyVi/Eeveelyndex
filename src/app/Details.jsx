@@ -21,12 +21,12 @@ function Details() {
 	if (!types) return;
 
 	return (
-		<div className="pokedetails">
+		<div className="pokedetails__container">
 			<Link to="/pokedex" className="btn__back">
 				<img src="/pokeball.gif" alt="icon" width="25" height="25" />
 				<span>Volver</span>
 			</Link>
-			<div className="poke__details-all">
+			<div className="poke__details-card">
 				<div className={`poke__details type--${types[0]}`}>
 					<div className="poke__details-header">
 						<img
