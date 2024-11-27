@@ -54,55 +54,60 @@ function Pokedex() {
 	const pokemonsArray = isFiltering ? pokemons?.pokemon : pokemons?.results;
 
 	return (
-		<div className="pokedex">
+		<>
 			<div className="hero" />
+			<div className="pokedex">
+				<Link to="/" className="btn__back">
+					<img src="/pokeball.gif" alt="icon" width="25" height="25" />
+					<span>Volver</span>
+				</Link>
 
-			<Link to="/" className="btn__back">
-				<img src="/pokeball.gif" alt="icon" width="25" height="25" />
-				<span>Volver</span>
-			</Link>
-
-			<div className="pokedex__container">
-				<Header />
-				{loading ? (
-					<div>
-						<img src="/load-wop.gif" alt="load-wop" className="load__wooper" />
-					</div>
-				) : error ? (
-					<h2 className="err__psy">
-						<img className="imgpsy" src="/err-psy.gif" alt="err_psy" />
-						<p className="texterr">{error}</p>
-					</h2>
-				) : (
-					<>
-						<div className="pokedex__form syf">
-							<Search handleSearch={handleSearch} />
-							<Filters handleTypeFilter={handleTypeFilter} />
+				<div className="pokedex__container">
+					<Header />
+					{loading ? (
+						<div>
+							<img
+								src="/load-wop.gif"
+								alt="load-wop"
+								className="load__wooper"
+							/>
 						</div>
+					) : error ? (
+						<h2 className="err__psy">
+							<img className="imgpsy" src="/err-psy.gif" alt="err_psy" />
+							<p className="texterr">{error}</p>
+						</h2>
+					) : (
+						<>
+							<div className="pokedex__form syf">
+								<Search handleSearch={handleSearch} />
+								<Filters handleTypeFilter={handleTypeFilter} />
+							</div>
 
-						<div className="btns__pg">
-							<button onClick={onPrev} disabled={!pokemons?.previous}>
-								Anterior
-							</button>
-							<button onClick={onNext} disabled={!pokemons?.next}>
-								Siguiente
-							</button>
-						</div>
+							<div className="btns__pg">
+								<button onClick={onPrev} disabled={!pokemons?.previous}>
+									Anterior
+								</button>
+								<button onClick={onNext} disabled={!pokemons?.next}>
+									Siguiente
+								</button>
+							</div>
 
-						<div className="pokedex__cards">
-							{pokemonUrl ? (
-								<PokemonCard url={pokemonUrl} />
-							) : (
-								<PokemonList
-									pokemons={pokemonsArray}
-									isFiltering={isFiltering}
-								/>
-							)}
-						</div>
-					</>
-				)}
+							<div className="pokedex__cards">
+								{pokemonUrl ? (
+									<PokemonCard url={pokemonUrl} />
+								) : (
+									<PokemonList
+										pokemons={pokemonsArray}
+										isFiltering={isFiltering}
+									/>
+								)}
+							</div>
+						</>
+					)}
+				</div>
 			</div>
-		</div>
+		</>
 	);
 }
 
