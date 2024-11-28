@@ -27,6 +27,13 @@ function Home() {
 	return (
 		<div className="home">
 			<div className="home__content">
+				<img
+					className="home__lg"
+					src="/lg2.png"
+					alt="lg"
+					width="425"
+					height="185"
+				/>
 				<h2 className="home__title">
 					¡Hola {name ? <>de nuevo {name}</> : 'Entrenador'}!
 				</h2>
