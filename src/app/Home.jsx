@@ -31,7 +31,7 @@ function Home() {
 					className="home__lg"
 					src="/lg2.png"
 					alt="lg"
-					width="425"
+					width="350"
 					height="185"
 				/>
 				<h2 className="home__title">
