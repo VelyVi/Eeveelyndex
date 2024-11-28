@@ -19,7 +19,12 @@ function Search({ handleSearch }) {
 			<form onSubmit={onSubmit} className="search search__item">
 				<div className="search__input">
 					<MdOutlineSearch />
-					<input type="text" placeholder="Nombre del pokémon" ref={inputRef} />
+					<input
+						className="inputtest"
+						type="text"
+						placeholder="Nombre del pokémon"
+						ref={inputRef}
+					/>
 				</div>
 
 				<button onClick={onSearch} className="search__btn">
