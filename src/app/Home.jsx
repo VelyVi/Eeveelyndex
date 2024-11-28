@@ -8,13 +8,14 @@ function Home() {
 	const [name, dispatch] = useNameContext();
 	const navigate = useNavigate();
 
-	const setName = () => {
+	const setName = (e) => {
 		dispatch({
 			type: types.SET_NAME,
 			payload: inputRef.current.value.trim(),
 		});
 		inputRef.current.value = '';
 		navigate('/pokedex');
+		e.preventDefault();
 	};
 
 	const clearName = () => {
