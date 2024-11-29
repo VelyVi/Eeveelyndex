@@ -35,7 +35,7 @@
 	border-radius: 15px;
 	overflow: hidden;
 	height: auto;
-	cursor: pointer;
+
 	background-color: #ffffff80;
 	-webkit-backdrop-filter: brightness(1) blur(5px);
 	backdrop-filter: brightness(1) blur(5px);

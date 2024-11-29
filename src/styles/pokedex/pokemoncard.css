@@ -7,7 +7,6 @@
 	width: 100%;
 	border-radius: 15px;
 	overflow: hidden;
-	cursor: pointer;
 	background-color: #ffffff80;
 	-webkit-backdrop-filter: brightness(1) blur(5px);
 	backdrop-filter: brightness(1) blur(5px);
@@ -28,6 +27,7 @@
 	border-radius: 15px;
 	max-width: 350px;
 	width: 450px;
+	cursor: pointer;
 }
 
 .btn__handle-Shiny {
@@ -69,6 +69,7 @@
 
 .poke__card-body {
 	padding: 0 1rem 2rem;
+	cursor: pointer;
 }
 
 .poke__card-name {
