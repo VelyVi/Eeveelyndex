@@ -17,6 +17,33 @@
 	}
 }
 
+.psyloading {
+	justify-content: center;
+	align-items: center;
+	display: flex;
+	flex-direction: column;
+}
+
+.psyloading img {
+	border-radius: 15px;
+	max-width: 350px;
+	width: 450px;
+}
+
+.btn__handle-Shiny {
+	height: 32.5%;
+	width: 85%;
+	background-color: transparent;
+	border: transparent;
+	cursor: pointer;
+	padding: 1.5rem;
+}
+
+.shinny__icon {
+	height: 30px;
+	width: 20px;
+}
+
 .poke__card-header {
 	position: relative;
 	background-color: #777;

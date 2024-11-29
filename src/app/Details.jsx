@@ -1,12 +1,14 @@
 import { Link, useParams } from 'react-router-dom';
 import { useFetch } from '../hooks/useFetch';
-import { useEffect, Fragment } from 'react';
+import { useEffect, Fragment, useState } from 'react';
 import { tipos } from '../utils/helpers';
 import '../styles/details/details.css';
+import { IoSparkles } from 'react-icons/io5';
 
 function Details() {
 	const params = useParams();
 	const [pokemon, setPokemon] = useFetch();
+	const [pokeShiny, setPokeShiny] = useState(false);
 
 	useEffect(() => {
 		if (params?.name) getPokemon();
@@ -14,6 +16,10 @@ function Details() {
 
 	const getPokemon = () => {
 		setPokemon(`https://pokeapi.co/api/v2/pokemon/${params?.name}`);
+	};
+
+	const handleShiny = () => {
+		setPokeShiny(!pokeShiny);
 	};
 
 	const types = pokemon?.types.map((type) => type?.type?.name);
@@ -29,15 +35,34 @@ function Details() {
 			<div className="poke__details-card">
 				<div className={`poke__details type--${types[0]}`}>
 					<div className="poke__details-header">
-						<img
-							src={pokemon?.sprites?.other?.showdown?.front_default}
-							alt={pokemon?.name}
-						/>
+						{pokeShiny ? (
+							<>
+								<button className="btn__shiny" onClick={handleShiny}>
+									<img
+										src={pokemon?.sprites?.other?.showdown?.front_shiny}
+										alt={pokemon?.name}
+									/>
+									<IoSparkles className="shiny__icon" />
+								</button>
+							</>
+						) : (
+							<>
+								<button className="btn__shiny" onClick={handleShiny}>
+									<img
+										src={pokemon?.sprites?.other?.showdown?.front_default}
+										alt={pokemon?.name}
+									/>
+								</button>
+							</>
+						)}
 					</div>
 					<div className="poke__details-body">
 						<div className="poke__details-nyn">
 							<span># {pokemon?.id?.toString().padStart(3, '0')}</span>
-							<h2 className="poke__details-name">{pokemon?.name}</h2>
+
+							<div>
+								<h2 className="poke__details-name">{pokemon?.name}</h2>
+							</div>
 						</div>
 						<div className="poke__details-pya">
 							<div className="poke__details-peso">

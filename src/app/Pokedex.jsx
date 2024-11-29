@@ -67,7 +67,7 @@ function Pokedex() {
 				<div className="pokedex__container">
 					<Header />
 					{loading ? (
-						<div>
+						<div className="load__wooper">
 							<img
 								src="/load-wop.gif"
 								alt="load-wop"
@@ -99,11 +99,11 @@ function Pokedex() {
 								{pokemonUrl ? (
 									<PokemonCard
 										url={pokemonUrl}
-										onError={() =>
+										onError={() => {
 											setSearchErr(
 												'Lo siento, no se ha encontrado algún pokémon con ese nombre.',
-											)
-										}
+											);
+										}}
 									/>
 								) : (
 									<PokemonList

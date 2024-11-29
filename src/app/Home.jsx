@@ -44,7 +44,7 @@ function Home() {
 							<p className="home__text">
 								¡Continuemos con tu viaje! Ve a tu{' '}
 								<Link className="home__link" to="/pokedex">
-									Pokédex
+									Pokédex.
 								</Link>
 							</p>
 
@@ -53,21 +53,23 @@ function Home() {
 							</button>
 						</>
 					) : (
-						<form onSubmit={setName}>
-							<p className="home__text">
+						<>
+							<p className="home__text home__title">
 								Para poder comenzar tu exploración, dame tu nombre de
 								entrenador.
 							</p>
-							<input
-								ref={inputRef}
-								type="text"
-								placeholder="Tu nombre . . ."
-								className="home__input"
-							/>
-							<button onClick={setName} className="home__btn">
-								¡Comencémos!
-							</button>
-						</form>
+							<form onSubmit={setName}>
+								<input
+									ref={inputRef}
+									type="text"
+									placeholder="Tu nombre . . ."
+									className="home__input"
+								/>
+								<button onClick={setName} className="home__btn">
+									¡Comencémos!
+								</button>
+							</form>
+						</>
 					)}
 				</div>
 			</div>

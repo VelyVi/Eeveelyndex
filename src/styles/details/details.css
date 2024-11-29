@@ -15,7 +15,19 @@
 .poke__details-card {
 	max-width: 350px;
 	width: 700px;
-	padding: 2rem 1.5rem;
+}
+
+.btn__shiny {
+	width: 20%;
+	background-color: transparent;
+	border: transparent;
+	cursor: pointer;
+	padding: 0.9rem;
+}
+
+.shiny__icon {
+	height: 50px;
+	width: 20px;
 }
 
 .poke__details {
@@ -46,8 +58,8 @@
 	left: 0;
 	right: 0;
 	margin: 0 auto;
-	width: 85%;
-	height: 100%;
+	width: 77%;
+	height: 98%;
 }
 
 .poke__details-body {

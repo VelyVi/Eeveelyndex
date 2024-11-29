@@ -1,8 +1,16 @@
 .pokedex__header {
 	margin: 1rem 0;
+	margin-bottom: 0.6rem;
+	color: #ffffff;
+	font-weight: 500;
+	text-align: center;
+	font-size: 1.2rem;
+	background-color: #fba70066;
+	padding: 10px;
+	border-radius: 8px;
 }
 
 .nameuser {
 	font-weight: 700;
-	color: #ffa500;
+	color: #000000cb;
 }

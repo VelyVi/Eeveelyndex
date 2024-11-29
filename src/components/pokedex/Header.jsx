@@ -10,7 +10,7 @@ function Header() {
 			<div>
 				<span className="nameuser">Bienvenido {name}</span>, aquí podremos
 				encontrar toda clase de pokémons y entre ellos puedes descubrir a tu
-				favorito
+				favorito.
 			</div>
 		</div>
 	);
