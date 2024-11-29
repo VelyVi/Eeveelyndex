@@ -8,11 +8,18 @@ function useFetch() {
 
 	const dataFetch = (url) => {
 		setLoading(true);
+		setError(null);
 
 		axios
 			.get(url)
 			.then((res) => setData(res.data))
-			.catch((err) => setError(err.message))
+			.catch((err) => {
+				if (err.response && err.response.status === 404) {
+					setError('No se ha encontrado');
+				} else {
+					setError('Error al cargar los datos');
+				}
+			})
 			.finally(() => setLoading(false));
 	};
 

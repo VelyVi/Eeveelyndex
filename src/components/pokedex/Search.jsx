@@ -4,7 +4,6 @@ import '../../styles/pokedex/search.css';
 
 function Search({ handleSearch }) {
 	const inputRef = useRef();
-
 	const onSearch = () => {
 		handleSearch(inputRef.current.value.toLowerCase().trim());
 		inputRef.current.value = '';
@@ -19,12 +18,7 @@ function Search({ handleSearch }) {
 			<form onSubmit={onSubmit} className="search search__item">
 				<div className="search__input">
 					<MdOutlineSearch />
-					<input
-						className="inputtest"
-						type="text"
-						placeholder="Nombre del pokémon"
-						ref={inputRef}
-					/>
+					<input type="text" placeholder="Nombre del pokémon" ref={inputRef} />
 				</div>
 
 				<button onClick={onSearch} className="search__btn">

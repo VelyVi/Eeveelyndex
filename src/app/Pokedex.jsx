@@ -14,6 +14,7 @@ function Pokedex() {
 	const [pokemons, setPokemons, loading, error] = useFetch();
 	const [pokemonUrl, setPokemonUrl] = useState(null);
 	const [isFiltering, setIsFiltering] = useState(false);
+	const [searchErr, setSearchErr] = useState(null);
 
 	useEffect(() => {
 		getPokemons();
@@ -24,6 +25,7 @@ function Pokedex() {
 	};
 
 	const handleSearch = (value) => {
+		setSearchErr(null);
 		if (!value) {
 			setIsFiltering(false);
 			setPokemonUrl(null);
@@ -80,7 +82,7 @@ function Pokedex() {
 					) : (
 						<>
 							<div className="pokedex__form syf">
-								<Search handleSearch={handleSearch} />
+								<Search handleSearch={handleSearch} url={pokemonUrl} />
 								<Filters handleTypeFilter={handleTypeFilter} />
 							</div>
 
@@ -95,12 +97,30 @@ function Pokedex() {
 
 							<div className="pokedex__cards">
 								{pokemonUrl ? (
-									<PokemonCard url={pokemonUrl} />
+									<PokemonCard
+										url={pokemonUrl}
+										onError={() =>
+											setSearchErr(
+												'Lo siento, no se ha encontrado algún pokémon con ese nombre.',
+											)
+										}
+									/>
 								) : (
 									<PokemonList
 										pokemons={pokemonsArray}
 										isFiltering={isFiltering}
 									/>
+								)}
+								{searchErr && (
+									<div className="psynotfound">
+										{' '}
+										<img
+											className="psy__item"
+											src="/psynotfound.gif"
+											alt="psynotfound"
+										/>
+										<p className="pokedex__error psy__item">{searchErr}</p>{' '}
+									</div>
 								)}
 							</div>
 						</>

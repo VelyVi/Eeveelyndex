@@ -4,8 +4,8 @@ import { Link } from 'react-router-dom';
 import { tipos } from '../../utils/helpers';
 import '../../styles/pokedex/pokemoncard.css';
 
-function PokemonCard({ url }) {
-	const [pokemon, setPokemon] = useFetch();
+function PokemonCard({ url, onError }) {
+	const [pokemon, setPokemon, loading, error] = useFetch();
 
 	useEffect(() => {
 		if (url) getPokemon();
@@ -15,7 +15,16 @@ function PokemonCard({ url }) {
 		setPokemon(url);
 	};
 
+	useEffect(() => {
+		if (error && onError) {
+			onError();
+		}
+	}, [error, onError]);
+
 	const types = pokemon?.types.map((type) => type?.type?.name);
+
+	if (loading) return <p className="search__load">Cargando Pokémon...</p>;
+	if (error) return null;
 
 	if (!types) return;
 
