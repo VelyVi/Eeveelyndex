@@ -81,20 +81,21 @@ function Pokedex() {
 						</h2>
 					) : (
 						<>
-							<div className="pokedex__form syf">
-								<Search handleSearch={handleSearch} url={pokemonUrl} />
-								<Filters handleTypeFilter={handleTypeFilter} />
-							</div>
+							<div className="sticky">
+								<div className="pokedex__form syf">
+									<Search handleSearch={handleSearch} url={pokemonUrl} />
+									<Filters handleTypeFilter={handleTypeFilter} />
+								</div>
 
-							<div className="btns__pg">
-								<button onClick={onPrev} disabled={!pokemons?.previous}>
-									Anterior
-								</button>
-								<button onClick={onNext} disabled={!pokemons?.next}>
-									Siguiente
-								</button>
+								<div className="btns__pg">
+									<button onClick={onPrev} disabled={!pokemons?.previous}>
+										Anterior
+									</button>
+									<button onClick={onNext} disabled={!pokemons?.next}>
+										Siguiente
+									</button>
+								</div>
 							</div>
-
 							<div className="pokedex__cards">
 								{pokemonUrl ? (
 									<PokemonCard
