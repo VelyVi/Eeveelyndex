@@ -20,6 +20,8 @@ function Details() {
 
 	const handleShiny = () => {
 		setPokeShiny(!pokeShiny);
+		let audio = new Audio(`${pokemon?.cries?.latest}`);
+		audio.play();
 	};
 
 	const types = pokemon?.types.map((type) => type?.type?.name);
