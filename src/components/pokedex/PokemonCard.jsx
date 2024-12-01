@@ -23,6 +23,8 @@ function PokemonCard({ url, onError }) {
 
 	const handleShiny = () => {
 		setPokemonShiny(!pokemonShiny);
+		let audio = new Audio(`${pokemon?.cries?.latest}`);
+		audio.play();
 	};
 
 	const types = pokemon?.types.map((type) => type?.type?.name);
