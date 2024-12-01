@@ -17,7 +17,4 @@ export const tipos = {
 	dragon: 'Dragón',
 	dark: 'Siniestro',
 	fairy: 'Hada',
-	stellar: 'Teratipo',
-	unknown: 'Desconocido',
-	shadow: 'Sombra',
 };
