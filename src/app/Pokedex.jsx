@@ -41,6 +41,7 @@ function Pokedex() {
 			setPokemons('https://pokeapi.co/api/v2/pokemon');
 		} else {
 			setIsFiltering(true);
+			setPokemonUrl(null);
 			setPokemons(`https://pokeapi.co/api/v2/type/${type}`);
 		}
 	};
