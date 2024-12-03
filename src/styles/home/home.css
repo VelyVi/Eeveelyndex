@@ -8,6 +8,16 @@
 	background-repeat: no-repeat;
 }
 
+.home2 {
+	display: grid;
+	place-content: center;
+	height: 100dvh;
+	background-image: url('/hero2.png');
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
 .home__title {
 	margin-bottom: 0.6rem;
 	color: #ffffff;

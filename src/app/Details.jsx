@@ -4,6 +4,8 @@ import { useEffect, Fragment, useState } from 'react';
 import { tipos } from '../utils/helpers';
 import '../styles/details/details.css';
 import { IoSparkles } from 'react-icons/io5';
+import { Chart } from '../components/details/Chart';
+import { Abilities } from '../components/details/Abilities';
 
 function Details() {
 	const params = useParams();
@@ -102,11 +104,12 @@ function Details() {
 								</div>
 								<div className="pokedetails__tys-items">
 									<h3>Habilidades</h3>
-									<div>
+									<div className="details__card-abilities">
 										{pokemon?.abilities?.map((data) => (
-											<span key={data?.ability?.name}>
-												{data?.ability?.name}
-											</span>
+											<Abilities
+												key={data?.ability?.name}
+												data={data?.ability}
+											/>
 										))}
 									</div>
 								</div>
@@ -115,21 +118,8 @@ function Details() {
 							<div>
 								<h3 className="poke__stats-title">Stats</h3>
 								<div className="poke__details-stats">
-									<div className="poke__details-item">
-										<span>HP</span>
-										<span>{pokemon?.stats[0]?.base_stat}</span>
-									</div>
-									<div className="poke__details-item">
-										<span>ATAQUE</span>
-										<span>{pokemon?.stats[1]?.base_stat}</span>
-									</div>
-									<div className="poke__details-item">
-										<span>DEFENSA</span>
-										<span>{pokemon?.stats[2]?.base_stat}</span>
-									</div>
-									<div className="poke__details-item">
-										<span>VELOCIDAD</span>
-										<span>{pokemon?.stats[5]?.base_stat}</span>
+									<div className="chart__container">
+										<Chart stats={pokemon?.stats} />
 									</div>
 								</div>
 							</div>
