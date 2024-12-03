@@ -6,6 +6,7 @@ import '../styles/details/details.css';
 import { IoSparkles } from 'react-icons/io5';
 import { Chart } from '../components/details/Chart';
 import { Abilities } from '../components/details/Abilities';
+import { Types } from '../components/details/Types';
 
 function Details() {
 	const params = useParams();
@@ -80,30 +81,20 @@ function Details() {
 							</div>
 						</div>
 
-						<div>
+						<div className="container__tys">
 							<div className="poke__details-tys">
 								<div className="pokedetails__tys-items">
-									<h3>Tipo</h3>
+									<h3 className="tipo__title">Tipo</h3>
 									<div>
-										<span className="poke__details-types">
-											{types?.map((type, index) => {
-												return (
-													<Fragment key={type}>
-														{index > 0 ? (
-															<>
-																<span> / {tipos[type]}</span>
-															</>
-														) : (
-															<span>{tipos[type]}</span>
-														)}
-													</Fragment>
-												);
-											})}{' '}
-										</span>
+										<div className="poke__details-types">
+											<div className="types__container">
+												<Types types={types} tipos={tipos} />
+											</div>
+										</div>
 									</div>
 								</div>
 								<div className="pokedetails__tys-items">
-									<h3>Habilidades</h3>
+									<h3 className="tipo__title">Habilidades</h3>
 									<div className="details__card-abilities">
 										{pokemon?.abilities?.map((data) => (
 											<Abilities

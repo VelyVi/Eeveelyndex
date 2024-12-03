@@ -87,7 +87,7 @@
 	align-items: center;
 	flex-direction: row;
 	flex-wrap: wrap;
-	justify-content: left;
+	justify-content: center;
 	margin: 0;
 }
 
@@ -109,7 +109,7 @@
 }
 
 .poke__details-body {
-	padding: 0 1rem 2rem;
+	padding: 0 1rem 0.5rem;
 }
 
 .poke__details-nyn {
@@ -125,11 +125,17 @@
 	margin-top: 1rem;
 }
 
+.tipo__title {
+	margin-bottom: 0.5rem;
+}
+
 .poke__details-tys {
 	display: flex;
-	justify-content: center;
 	font-size: 14px;
-	gap: 5rem;
+	justify-content: space-around;
+	align-items: flex-start;
+	flex-direction: row;
+	flex-wrap: nowrap;
 }
 
 .poke__details-item {
@@ -142,10 +148,20 @@
 	color: #888;
 }
 
+.details__card--header-types img {
+	border-radius: 0.5rem;
+}
+
 .pokedetails__tys-items {
 	display: flex;
 	flex-direction: column;
 	max-width: 100px;
+	align-items: center;
+}
+
+.types__container {
+	display: flex;
+	gap: 0.5rem;
 }
 
 .pokedetails__tys-items h3:first-child {
