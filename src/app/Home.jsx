@@ -1,7 +1,8 @@
 import { useRef } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { types, useNameContext } from '../contexts/nameContext';
-import { bgchristmas } from '../assets/img/bg';
+//import { bgchristmas } from '../assets/img/bg';
+//import { bgspring } from '../assets/img/bg';
 import '../styles/home/home.css';
 
 function Home() {

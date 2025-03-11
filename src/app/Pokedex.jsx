@@ -58,7 +58,11 @@ function Pokedex() {
 		setPokemons(pokemons?.previous);
 	};
 
-	const pokemonsArray = isFiltering ? pokemons?.pokemon : pokemons?.results;
+	const pokemonsArray = isFiltering
+		? pokemonUrl?.filter((pokemon) =>
+				pokemon?.name.toLowerCase().includes(pokemons),
+		  )
+		: pokemons?.results;
 
 	return (
 		<>
